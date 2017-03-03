@@ -1,4 +1,11 @@
-<!doctype html>
+<%-- 
+    Document   : gestion
+    Created on : 03-mar-2017, 19:02:32
+    Author     : josejimenezdelapaz
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -28,7 +35,7 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
+        <%@include file="WEB-INF/jspf/header.jspf" %>
 
 
         <div class="container">
@@ -94,9 +101,7 @@
 
             <hr>
 
-            <footer>
-                <p>&copy; Company 2015</p>
-            </footer>
+             <%@include file="WEB-INF/jspf/footer.jspf" %>
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 

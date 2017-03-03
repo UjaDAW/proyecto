@@ -1,4 +1,11 @@
-<!doctype html>
+<%-- 
+    Document   : index
+    Created on : 03-mar-2017, 19:11:11
+    Author     : josejimenezdelapaz
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -25,56 +32,8 @@
 
     <body>
 
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">SPARTANGYM</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right" role="form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Nick" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Contraseña" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Identifícame</button>
-                        
-                        <a href="usuarionuevo.html"> Registrarme </a>            
-                    </form>
-                </div><!--/.navbar-collapse -->
+        <%@include file="WEB-INF/jspf/header.jspf" %>
 
-                <div class="menu">
-                    <ul class="nav nav-pills">
-                        <li role="presentation" class="active"><a href="#">Inicio</a></li>
-                        <li role="presentation"><a href="#">Clases Colectivas</a></li>
-                        <li class="Instalaciones">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Instalaciones <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Piscina</a></li>
-                                <li><a href="#">Spa</a></li>
-                                <li><a href="#">Fitness</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Entrenamiento personal</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Vestuarios</a></li>                        
-                            </ul>
-                        </li>
-                        <li role="presentation"><a href="#">Sobre nosotros</a></li>     
-                        <li role="presentation"><a href="gestion.jsp">ADMIN usuarios</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
 
 
@@ -111,7 +70,7 @@
 
             <hr>
 
-            
+            <%@include file="WEB-INF/jspf/footer.jspf" %>
         </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -138,3 +97,4 @@
         </script>
     </body>
 </html>
+
