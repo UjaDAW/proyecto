@@ -1,0 +1,21 @@
+<%-- Pie comun para todas las paginas --%>
+
+<footer>
+    
+    <div class="navbar-left">
+        <p>Company 2017</p>
+    </div>
+    
+    <div class="navbar-right">
+        <p>Angel Gutierrez y Jose Jimenez</p>
+    </div>
+    
+    <div class="caja-redes">
+        <a href="https://es.linkedin.com/" class="icon-button linkedin"><i class="icon-linkedin"></i><span></span></a>
+        <a href="https://twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+        <a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+        <a href="https://plus.google.com/" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+    </div>
+    
+    
+</footer>
