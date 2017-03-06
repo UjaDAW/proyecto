@@ -28,27 +28,31 @@
                         </ol>   
                         <!-- Carousel items -->
                         <div class="carousel-inner">
+                            
                             <div class="active item">
-                                <img src="img/BodyCombat.jpg" width="1500" height="200" >
+                                <img src="img/BodyCombat.jpg" width="1500" height="200">
                                 <div class="carousel-caption">
                                     <h3>Oferta del mes</h3>
-                                    <p>Prueba 3</p>
+                                    <p>Prueba</p>
                                 </div>
                             </div>
+                            
                             <div class="item">
-                                <img src="img/BodyPump.jpg" width="1500" >
+                                <img src="img/BodyPump.jpg" width="1500" height="200">
                                 <div class="carousel-caption">
                                     <h3>Deporte en compañía</h3>
-                                    <p>Prueba 2</p>
+                                    <p>Prueba</p>
                                 </div>
                             </div>
+                            
                             <div class="item">
-                                <img src="img/Crossfit.jpg"  >
+                                <img src="img/Crossfit.jpg" width="1500" height="200">
                                 <div class="carousel-caption">
                                     <h3>Cursos gratuitos</h3>
                                     <p>Prueba</p>
                                 </div>
                             </div>
+                            
                         </div>
                         <!-- Carousel nav -->
                         <a class="carousel-control left" href="#myCarousel" data-slide="prev">

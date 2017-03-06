@@ -1,11 +1,11 @@
 
 <footer>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="centrado">
+                <div class="">
                     <h3>Horario: </h3>
                     <ul>
                         <li>Lunes a viernes: de 7:30h a 23:00h</li>
@@ -20,16 +20,18 @@
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-4">
+            <div class="col-xs-12 col-sm-6 col-md-4">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.400785089467!2d-3.8034108850665542!3d37.78064621959547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6dd719c64a1eb9%3A0xe8b607ad4e22d96e!2sAv.+Barcelona%2C+16%2C+23006+Ja%C3%A9n!5e0!3m2!1ses!2ses!4v1488827017982" width="300" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <div class="caja-redes">
-                    <h3>Redes Sociales: </h3>
-                    <a href="https://es.linkedin.com/" class="icon-button linkedin"><i class="icon-linkedin"></i><span></span></a>
-                    <a href="https://twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
-                    <a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+            <div class="container">
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <div class="caja-redes">
+                        <h3>Redes Sociales: </h3>
+                        <a href="https://es.linkedin.com/" class="icon-button linkedin"><i class="icon-linkedin"></i><span></span></a>
+                        <a href="https://twitter.com/" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+                        <a href="https://www.facebook.com/" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+                    </div>
                 </div>
             </div>
         </div>
