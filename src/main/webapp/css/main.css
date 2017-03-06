@@ -4,10 +4,83 @@
    Author's custom styles
    ========================================================================== */
 
-   body 
-   {
-       padding-top: 5px;
-       padding-bottom: 5px;
-   }
-   
-   
+.item
+{
+    background: #333;    
+    text-align: center;
+    height: 300px !important;
+}
+.carousel
+{
+    margin-top: 20px;
+}
+.bs-example
+{
+    margin: 20px;
+}
+
+.titulo
+{
+    alignment-adjust: middle;
+}
+
+
+body
+{
+    padding:25px;
+    
+    /*Si navbar-fixed-top:*/
+    margin: 2em;
+    padding: 2em;
+    justify-content: center;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
