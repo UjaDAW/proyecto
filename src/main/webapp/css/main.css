@@ -25,6 +25,21 @@
 }
 
 
+
+
+.fondo{
+    background-color:#EEEEEE;
+}
+.separacion{
+    padding-top: 3em;
+}
+.separacion2{
+    padding-bottom: 4em;
+}
+
+
+
+
 body
 {
     padding:25px;
