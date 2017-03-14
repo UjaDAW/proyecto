@@ -22,7 +22,7 @@ public class Cliente {
     private String nick;
     private String pass;
     //Constructor por defecto
-    Cliente(){
+    public Cliente(){
         nombre="AAAA";
         apellidos="BBB BBB";
         email="aa@aa.com";
@@ -31,7 +31,7 @@ public class Cliente {
         pass="pass";
     }
     //Constructor parametrizado
-    Cliente(String _nombre,String _apellidos,String _email,Date _fechaNacimiento,String _nick,String _pass){
+   public Cliente(String _nombre,String _apellidos,String _email,Date _fechaNacimiento,String _nick,String _pass){
         this.nombre=_nombre;
         this.apellidos=_apellidos;
         this.email=_email;
@@ -40,7 +40,7 @@ public class Cliente {
         this.pass=_pass;
     }
     //Constructor de copia
-    Cliente(Cliente c){
+  public  Cliente(Cliente c){
         this.nombre=c.nombre;
         this.apellidos=c.apellidos;;
         this.email=c.email;;

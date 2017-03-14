@@ -81,7 +81,7 @@
 
                                 </div>
                                 <div class="bottom text-center">
-                                    ¿Eres nuevo? <a href="usuarionuevo.jsp"><b>Regístrate</b></a>
+                                   ¿Eres nuevo? <a href="clientes/crea'"><b>Regístrate</b></a> 
                                 </div>
                             </div>
                         </li>
