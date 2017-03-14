@@ -11,9 +11,7 @@
 
 
     <body>
-
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
             <div class="container">

@@ -18,7 +18,7 @@
 
             <div class="col-md-5 img-rounded fondo" >
                 <h2>NUEVO USUARIO</h2>
-                <form>
+                <form method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre">

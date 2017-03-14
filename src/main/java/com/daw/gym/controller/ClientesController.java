@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.daw.prac3;
+package com.daw.gym.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author josejimenezdelapaz
  */
 @WebServlet(name = "clientes", urlPatterns = {"/clientes"})
-public class clientes extends HttpServlet {
+public class ClientesController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
