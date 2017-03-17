@@ -20,6 +20,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 
+import com.daw.gym.model.Cliente;
+import com.daw.gym.model.dao.ClienteDAO;
+import com.daw.gym.model.dao.ClienteDAOList;
 /**
  *
  * @author josejimenezdelapaz
@@ -29,6 +32,7 @@ public class ClientesController extends HttpServlet {
 
     private String srvUrl;
     private String imgUrl;
+    private ClienteDAO clienteDAO;
     private static final Logger Log = Logger.getLogger(ClientesController.class.getName());
     private final String srvViewPath = "/WEB-INF/clientes";
 
@@ -55,11 +59,11 @@ public class ClientesController extends HttpServlet {
         //***ELEGIR DAOLIST O DAOJDBC
         //Select DAO Implementation
         //clienteDAO=new ClienteDAOJDBC();
-        /*
+        
         clienteDAO=new ClienteDAOList();
         
-        mediosPago=new MedioPagoDAO();
-         */
+      
+        
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -111,12 +115,12 @@ public class ClientesController extends HttpServlet {
 
         switch (action) {
             case "/visualiza": {    //VISUALIZA UN CLIENTE
-                /*
+                
                 int id=Integer.parseInt(request.getParameter("id"));
-                Cliente c = clienteDAO.buscaId(id);
-                request.setAttribute("cliente", c);
+              //  Cliente c = clienteDAO.buscaId(id);
+                //request.setAttribute("cliente", c);
                 rd=request.getRequestDispatcher(srvViewPath+"/visualiza.jsp");
-                 */
+                 
                 break;
             }
             case "/borra": {       //BORRAR CLIENTE
@@ -128,7 +132,7 @@ public class ClientesController extends HttpServlet {
                 return;
             }
             case "/crea": {        //FORMULARIO ALTA DE  CLIENTE
-                Cliente c = new Cliente();
+               Cliente c = new Cliente();
                 request.setAttribute("cliente", c);
                 rd = request.getRequestDispatcher(srvViewPath + "/crea.jsp");
                 break;
@@ -153,6 +157,10 @@ public class ClientesController extends HttpServlet {
                 break;
             }
              */
+            default:{
+               response.sendRedirect(srvUrl+"/crea");
+               return;
+            }
 
         }
         rd.forward(request, response);
@@ -174,21 +182,20 @@ public class ClientesController extends HttpServlet {
         
         //Detect current servlet action
         String action=(request.getPathInfo()!=null?request.getPathInfo():"");
-
         Log.log(Level.INFO, "Petición POST {0}", action);        
-
         switch (action) {
             case "/crea": {     //ALTA DE UN CLIENTE
-//                Cliente c=new Cliente();
-//                if (validateCustomer(request,c)) {
-//                    clienteDAO.crea(c); //Create new client
-//                    //Post-sent-redirect
-//                    response.sendRedirect(srvUrl+"/visualiza?id="+c.getId());
-//                } else { //Show form with validation errores
-//                    request.setAttribute("cliente", c);
-//                    RequestDispatcher rd = request.getRequestDispatcher(srvViewPath+"/crea.jsp");
-//                    rd.forward(request, response);
-//                }
+                Cliente c=new Cliente();
+                if (validateCustomer(request,c)) {
+                    clienteDAO.crea(c);
+                    //Post-sent-redirect
+                    response.sendRedirect(srvUrl+"/visualiza?id="+c.getId());
+                    return;
+                } else { //Show form with validation errores
+                    request.setAttribute("cliente", c);
+                    RequestDispatcher rd = request.getRequestDispatcher(srvViewPath+"/crea.jsp");
+                    rd.forward(request, response);
+                }
                 break;
             }
             case "/edita": {    //ACTUALIZAR UN CLIENTE
@@ -225,4 +232,35 @@ public class ClientesController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    
+    /**Recopilar datos de un formulario de cliente y generar mensajes de error en contexto de petición*/
+    private boolean validateCustomer(HttpServletRequest request, Cliente c) {
+        boolean valido=true;
+        //Capturamos y convertimos datos
+//        int id=Integer.parseInt(Util.getParam(request.getParameter("id"),"0"));
+//        String nombre=Util.getParam(request.getParameter("nombre"),"");
+//        String dni=Util.getParam(request.getParameter("dni"),"");
+//        boolean socio=Util.getParamBool(request.getParameter("socio"));
+//        int medioPago=Integer.parseInt(
+//                            Util.getParam(request.getParameter("medioPago"), "0")
+//                          );
+//        //Asignamos datos al bean
+//        c.setId(id);
+//        c.setNombre(nombre);
+//        c.setDni(dni);
+//        c.setSocio(socio);
+//        c.setMedioPago(medioPago);
+//        //Validamos Datos
+//        if (nombre.length()<3 || nombre.length()>50) {
+//            request.setAttribute("errNombre", "Nombre no válido");
+//            Log.log(Level.INFO, "Enviado Nombre de usuario no válido");        
+//            valido=false;
+//        }
+//        if (!dni.matches("^\\d{7,8}-?[a-zA-Z]{1}$")) {
+//            request.setAttribute("errDni", "DNI no válido (12345678A)");
+//            Log.log(Level.INFO, "Enviado DNI incorrecto");        
+//            valido=false;
+//        }
+        return valido;
+    }
 }

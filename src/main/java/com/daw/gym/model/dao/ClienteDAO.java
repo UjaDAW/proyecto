@@ -5,10 +5,12 @@
  */
 package com.daw.gym.model.dao;
 
+import com.daw.gym.model.Cliente;
+
 /**
  *
  * @author josejimenezdelapaz
  */
-public class ClienteDAO {
+public interface ClienteDAO extends GenericDAO<Cliente,Integer>{
     
 }

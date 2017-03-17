@@ -4,14 +4,14 @@
 <html class="no-js" lang="ES">
 
     <head>
-        <%@include file="WEB-INF/jspf/head.jspf"%>
+        <%@include file="/WEB-INF/jspf/head.jspf"%>
         <title>Spartan Gym</title>
     </head>
 
 
     <body>
 
-        <%@include file="WEB-INF/jspf/menu.jspf" %>
+        <%@include file="/WEB-INF/jspf/menu.jspf" %>
 
         <div class="container">
 
@@ -20,27 +20,27 @@
                 <form method="POST">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        <input type="text" value="${cliente.nombre}" class="form-control" id="nombre" placeholder="Nombre">
                     </div>
                     <div class="form-group">
                         <label for="nombre">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" placeholder="Apellido1 Apellido2">
+                        <input type="text" value="${cliente.apellidos}" class="form-control" id="apellidos" placeholder="Apellido1 Apellido2">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ejemplo@gmail.com">
+                        <input type="email" value="${cliente.email}" class="form-control" id="exampleInputEmail1" placeholder="ejemplo@gmail.com">
                     </div>
                     <div class="form-group">
                         <label for="fecha">Fecha de nacimiento</label>
-                        <input type="date" class="form-control" id="fechaNacimiento">
+                        <input type="date"  class="form-control" id="fechaNacimiento">
                     </div>
                     <div class="form-group">
                         <label for="nick">Nick del sistema</label>
-                        <input type="text" class="form-control" id="nick" placeholder="nick">
+                        <input type="text" value="${cliente.nick}" class="form-control" id="nick" placeholder="nick">
                     </div>
                     <div class="form-group">
                         <label for="password1">Contraseña</label>
-                        <input type="password" class="form-control" id="password1" placeholder="********">
+                        <input type="password" value="${cliente.pass}" class="form-control" id="password1" placeholder="********">
                     </div>
                     <div class="form-group">
                         <label for="password2">Repite la contraseña</label>
@@ -64,7 +64,7 @@
         </div><!-- /container -->
         <div class="container">
         <hr>
-            <%@include file="WEB-INF/jspf/pie.jspf" %>
+            <%@include file="/WEB-INF/jspf/pie.jspf" %>
         </div>
 
     </body>

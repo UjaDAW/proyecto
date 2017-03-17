@@ -14,41 +14,60 @@ import java.time.LocalDate;
  */
 public class Cliente {
 
-  
+    private int id;
     private String nombre;
     private String apellidos;
     private String email;
     private Date fechaNacimiento; //Import de .sql
     private String nick;
     private String pass;
+
     //Constructor por defecto
-    public Cliente(){
-        nombre="AAAA";
-        apellidos="BBB BBB";
-        email="aa@aa.com";
-        fechaNacimiento=Date.valueOf(LocalDate.MAX);
-        nick="nick";
-        pass="pass";
+    public Cliente() {
+        id = 0;
+        nombre = "";
+        apellidos = "";
+        email = "";
+        fechaNacimiento = Date.valueOf(LocalDate.MAX);
+        nick = "";
+        pass = "";
     }
+
     //Constructor parametrizado
-   public Cliente(String _nombre,String _apellidos,String _email,Date _fechaNacimiento,String _nick,String _pass){
-        this.nombre=_nombre;
-        this.apellidos=_apellidos;
-        this.email=_email;
-        this.fechaNacimiento=_fechaNacimiento;
-        this.nick=_nick;
-        this.pass=_pass;
+    public Cliente(int _id, String _nombre, String _apellidos, String _email, Date _fechaNacimiento, String _nick, String _pass) {
+        this.id = _id;
+        this.nombre = _nombre;
+        this.apellidos = _apellidos;
+        this.email = _email;
+        this.fechaNacimiento = _fechaNacimiento;
+        this.nick = _nick;
+        this.pass = _pass;
     }
+
     //Constructor de copia
-  public  Cliente(Cliente c){
-        this.nombre=c.nombre;
-        this.apellidos=c.apellidos;;
-        this.email=c.email;;
-        this.fechaNacimiento=c.fechaNacimiento;;
-        this.nick=c.nick;
-        this.pass=c.pass;
+    public Cliente(Cliente c) {
+        this.id=c.id;
+        this.nombre = c.nombre;
+        this.apellidos = c.apellidos;;
+        this.email = c.email;;
+        this.fechaNacimiento = c.fechaNacimiento;;
+        this.nick = c.nick;
+        this.pass = c.pass;
     }
-   
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
 
     /**
      * @return the nombre
