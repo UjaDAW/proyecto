@@ -13,18 +13,16 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="index.jsp">Spartan Gym</a>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}">Spartan Gym</a>
         </div>
 
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-                <li><a href="clases.jsp">Clases</a></li>
+                <li><a href="${pageContext.request.contextPath}/clases.jsp">Clases</a></li>
                 
-                <li><a href="contacta.jsp">Contacto</a></li>
-                
-                <li><a href="gestion.jsp">Gestion</a></li>
+                <li><a href="${pageContext.request.contextPath}/contacta.jsp">Contacto</a></li>
 
                 <!--<li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">Sobre nosotros<span class="caret"></span></a>
@@ -41,7 +39,6 @@
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="Buscar">
                 </div>
-                <!--<button type="submit" class="btn btn-default">Buscar</button>-->
             </form>
 
 
@@ -57,31 +54,24 @@
                                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 
                                         <div class="form-group">
-                                            <label class="sr-only" for="exampleInputEmail2">Correo</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Dirección de correo" required>
+                                            <label class="sr-only">Nick</label>
+                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Nick" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="sr-only" for="exampleInputPassword2">Contraseña</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Contraseña" required>
-                                            <div class="help-block text-right"><a href="">¿Has olvidado la contraseña?</a></div>
+                                            <label class="sr-only">Contraseña</label>
+                                            <input type="password" class="form-control" placeholder="Contraseña" required>
                                         </div>
 
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary btn-block">Identifícate</button>
                                         </div>
 
-                                        <!--<div class="checkbox">
-                                            <label>
-                                        <!--<input type="checkbox"> Mantedme conectado-->
-                                        <!-- </label>
-                                     </div>-->
-
                                     </form>
 
                                 </div>
                                 <div class="bottom text-center">
-                                    ¿Eres nuevo? <a href="usuarionuevo.jsp"><b>Regístrate</b></a>
+                                   ¿Eres nuevo? <a href="clientes"><b>Regístrate</b></a> 
                                 </div>
                             </div>
                         </li>
@@ -89,6 +79,6 @@
                 </li>
             </ul>
             
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+    </div>
 </nav>
